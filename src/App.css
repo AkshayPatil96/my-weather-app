@@ -1,0 +1,19 @@
+:root {
+  --main-bg-color: #43aefc;
+  --primary-text-color: #333333
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--main-bg-color);
+  color: var(--primary-text-color);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
