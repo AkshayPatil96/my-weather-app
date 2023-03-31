@@ -1,0 +1,99 @@
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  color: #43aefc;
+  border-bottom: 2px solid #a5a5a5;
+}
+
+.heading>svg {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.heading>h1 {
+  font-size: 25px;
+}
+
+.mainSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.mainSection>img {
+  /* border: 1px solid red; */
+}
+
+.mainSection>.temperature {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.mainSection>.temperature>sup {
+  font-size: 2rem;
+  font-weight: 600;
+
+}
+
+.type,
+.location {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px;
+}
+
+.location>svg {
+  font-size: 20px;
+  text-align: center;
+  margin-right: 5px;
+}
+
+.location {
+  margin-bottom: 1rem;
+}
+
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 2px solid #a5a5a5;
+}
+
+.footer>div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 0.5rem;
+  padding: 8px;
+}
+
+.footer>div:not(:last-child) {
+  border-right: 2px solid #a5a5a5;
+}
+
+.footer>div>svg {
+  font-size: 30px;
+  color: #43aefc;
+}
+
+.footer>div>.context {
+  font-weight: 600;
+  color: #4d4d4d;
+  text-align: center;
+}
+
+.context>p:first-child {
+  font-size: 20px;
+}
+
+.context>p:last-child {
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: -5px;
+}
