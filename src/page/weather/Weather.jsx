@@ -24,7 +24,12 @@ const Weather = () => {
 
       const data = await response?.data;
       setWeatherData(data);
-    } catch (error) {}
+    } catch (error) {
+      console.log("error: ", error?.response?.data?.message);
+      setWeatherData({
+        errorMessage: error?.response?.data?.message,
+      });
+    }
   };
 
   const getWeatherByCity = async (location) => {

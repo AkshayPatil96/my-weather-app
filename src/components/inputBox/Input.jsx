@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import styles from "./input.module.css";
 
 const Input = () => {
   const navigate = useNavigate();
-  const [location, setLocation] = useState("");
+
+  const loactionRef = useRef(null);
 
   const [loading, setLoading] = useState(false);
 
@@ -13,10 +14,6 @@ const Input = () => {
     setLoading(true);
     navigator.geolocation.getCurrentPosition(
       (position) => {
-        // setGeoLocation({
-        //   latitude: position.coords.latitude,
-        //   longitude: position.coords.longitude,
-        // });
         setLoading(false);
         navigate(
           `/weather?lat=${position.coords.latitude}&lng=${position.coords.longitude}`
@@ -34,19 +31,23 @@ const Input = () => {
     );
   };
 
+  useEffect(() => {
+    loactionRef.current.focus();
+
+    return () => {};
+  }, []);
+
   return (
     <div className={"container"}>
       <h1 className={styles.heading}>Weather App</h1>
       <div className={styles.inputDiv}>
         <input
           type="text"
-          value={location}
-          onChange={(e) => setLocation(e.target.value)}
+          ref={loactionRef}
           placeholder="Enter city name"
           onKeyDown={(e) => {
-            if (location && e.key === "Enter") {
-              navigate(`/weather/${location}`);
-              setLocation("");
+            if (loactionRef?.current?.value && e.key === "Enter") {
+              navigate(`/weather/${loactionRef?.current?.value}`);
             }
           }}
         />
