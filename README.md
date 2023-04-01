@@ -1,5 +1,5 @@
 # Weather App
-Welcome to my [Weather app](https://my-weather-app-hb.netlify.app)! This app is built using React and allows users to give weather report of your entered city or your devices location,
+Welcome to my [Weather app](https://my-weather-app-hb.netlify.app)! This app is built using React and allows users to give weather report of your entered city or your devices location.
 
 ## Getting Started
 To run this app locally, follow these steps:
