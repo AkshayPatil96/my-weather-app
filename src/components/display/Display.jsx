@@ -4,7 +4,6 @@ import {
   BsFillDropletFill,
   BsThermometerSun,
 } from "react-icons/bs";
-import { FaTemperatureHigh } from "react-icons/fa";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { RxCrossCircled } from "react-icons/rx";
 import { useNavigate } from "react-router-dom";
@@ -12,7 +11,6 @@ import { convertFahrenheitToCelsius } from "../../utils/logic";
 import styles from "./display.module.css";
 
 const Display = ({ data, loading }) => {
-  console.log("data: ", data);
   const navigate = useNavigate();
 
   return (

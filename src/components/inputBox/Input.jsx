@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-import useGeoLocation from "../../utils/customHooks/useGeoLocation";
 import styles from "./input.module.css";
 
 const Input = () => {

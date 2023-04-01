@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { toast } from "react-hot-toast";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import Display from "../../components/display/Display";
 
@@ -64,7 +63,6 @@ const Weather = () => {
     if (!location && !lat && !lng) {
       setTimeout(() => {
         navigate("/");
-        // toast.error("Please enter city name.");
       }, 3000);
     }
 
